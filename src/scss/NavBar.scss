@@ -1,0 +1,51 @@
+.nav-bar {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    justify-content: space-around;
+    width: 100vw;
+    height: 70px;
+    padding-inline: 20px;
+
+
+    .logo {
+        margin-right: 0;
+        all: unset;
+        transition: .3s all ease;
+        cursor: pointer;
+        font-family: 'Great Vibes', cursive;
+        font-size: 30px;
+
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+    }
+
+
+    .go-wish {
+        all: unset;
+        cursor: pointer;
+        font-weight: bold;
+        position: relative;
+
+        &::after{
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 0;
+            background-color: goldenrod;
+            height: 5px;
+            transition: .3s all ease;
+        }
+
+        &:hover::after{
+            width: 100%;
+        }
+    }
+}
