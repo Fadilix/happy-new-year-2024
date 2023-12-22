@@ -10,8 +10,8 @@ const Wish: React.FC = () => {
     const location = useLocation();
     const queryParams = new URLSearchParams(location.search);
     const lang = queryParams.get("lang");
-    const sender = queryParams.get("sender");
-    const receiver = queryParams.get("receiver");
+    const sender = queryParams.get("sender")?.replace("_", " ");
+    const receiver = queryParams.get("receiver")?.replace("_", " ");
 
     const frScript = `Cher <b>${receiver}</b>, <br /><br />
 
