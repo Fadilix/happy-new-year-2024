@@ -24,7 +24,6 @@ const WishForm: React.FC = () => {
     const handleGenerateLink = (link: any) => {
         setLink(link)
     }
-
     const handleFormSubmit = (e: React.FormEvent) => {
         e.preventDefault();
     }
