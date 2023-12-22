@@ -16,8 +16,10 @@
         all: unset;
         transition: .3s all ease;
         cursor: pointer;
-        font-family: 'Great Vibes', cursive;
         font-size: 30px;
+        font-weight: bold;
+        font-family: 'Great Vibes', cursive;
+
 
 
         &:hover {
@@ -30,7 +32,6 @@
     .go-wish {
         all: unset;
         cursor: pointer;
-        font-weight: bold;
         position: relative;
 
         &::after{

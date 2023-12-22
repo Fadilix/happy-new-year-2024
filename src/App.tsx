@@ -1,14 +1,15 @@
 import React from 'react'
-import {RouterProvider} from "react-router-dom"
+import { RouterProvider } from "react-router-dom"
 import { routes } from './routes/routes';
 import Snowfall from 'react-snowfall';
+import { Toaster  } from "react-hot-toast"
 
 
 const App: React.FC = () => {
   return (
     <div>
-    <Snowfall />
-
+      <Snowfall />
+      <Toaster />
       <RouterProvider router={routes} />
     </div>
   )

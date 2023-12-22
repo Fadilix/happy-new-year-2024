@@ -31,7 +31,9 @@ body {
             margin-bottom: 20px;
 
             h1 {
-                text-transform: uppercase
+                font-family: 'Great Vibes', cursive;
+                font-size: 60px;
+                margin-bottom: 20px;
             }
         }
 
@@ -48,19 +50,20 @@ body {
 
 
             @keyframes floatingButton {
-                0%{
+                0% {
                     transform: translateY(5px);
                 }
 
-                50%{
+                50% {
                     transform: translateY(0px);
                 }
 
-                100%{
+                100% {
                     transform: translateY(5px);
                 }
-                
+
             }
+
             &::after {
                 content: "";
                 position: absolute;
@@ -73,11 +76,12 @@ body {
                 z-index: -1;
 
             }
-            &:hover::after{
+
+            &:hover::after {
                 width: 100%;
             }
 
-            &:hover{
+            &:hover {
                 letter-spacing: 3px;
                 box-shadow: 0 0 10px white;
             }

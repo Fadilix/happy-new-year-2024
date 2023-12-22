@@ -9,13 +9,13 @@ export const routes = createBrowserRouter([
         path: "",
         Component: Home
     },
-    
+
     {
         path: "/wish-form",
         Component: WishForm
     },
     {
-        path: "/:name",
+        path: "/wish",
         Component: Wish
     },
 
