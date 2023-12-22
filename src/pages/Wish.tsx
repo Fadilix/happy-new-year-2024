@@ -52,7 +52,7 @@ const Wish: React.FC = () => {
                     )
                 )}
 
-                <p style={{ marginLeft: "75%", fontWeight: "bold" }}>{sender}</p>
+                <p style={{ marginLeft: "75%", fontWeight: "bold", marginTop: "20px" }}>{sender}</p>
 
             </div>
             <button className='send-to-someone'><Link to="/wish-form">Send Wish to someone</Link></button>
