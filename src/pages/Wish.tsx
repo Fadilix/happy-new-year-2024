@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import NavBar from '../components/NavBar';
 import Confetti from 'react-confetti';
 import "../scss/Wish.scss"
+import GitHub from '../components/GitHub';
 
 
 const Wish: React.FC = () => {
@@ -41,6 +42,7 @@ const Wish: React.FC = () => {
 
             </div>
             <button className='send-to-someone'><Link to="/wish-form">Send Wish to someone</Link></button>
+            <GitHub />
         </div>
     );
 };

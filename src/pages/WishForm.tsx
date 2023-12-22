@@ -5,6 +5,7 @@ import "../scss/WishForm.scss"
 import clipboardCopy from 'clipboard-copy';
 
 import toast from "react-hot-toast"
+import GitHub from '../components/GitHub';
 const WishForm: React.FC = () => {
     const [formData, setFormData] = useState({
         receiver: '',
@@ -93,6 +94,7 @@ const WishForm: React.FC = () => {
                     </div>
                 )}
             </div>
+            <GitHub />
         </div>
     );
 };

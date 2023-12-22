@@ -2,6 +2,7 @@ import React from 'react';
 import "../scss/Home.scss";
 import NavBar from '../components/NavBar';
 import { Link } from 'react-router-dom';
+import GitHub from '../components/GitHub';
 
 
 const Home: React.FC = () => {
@@ -13,6 +14,7 @@ const Home: React.FC = () => {
                 <p>As the calendar turns a new page, may the chapters of your life be written with love, happiness, and success. Here's to embracing fresh opportunities, cherishing precious moments, and creating beautiful memories. May the coming year bring you prosperity, good health, and the fulfillment of your dreams. Happy New Year! 🎉✨</p>
             </div>
             <button className='wish-someone'><Link to="/wish-form">Wish Happy New Year to someone</Link></button>
+            <GitHub />
         </div>
     )
 }
