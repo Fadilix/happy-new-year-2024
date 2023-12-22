@@ -90,10 +90,13 @@
         background-color: #ccc;
         padding: 10px;
         border-radius: 8px;
+        width: 300px;
         color: black;
-        text-align: center;
         display: flex;
+        flex-direction: column;
         align-items: center;
+        overflow: hidden;
+        font-size: 10px;
     
         button {
             all: unset;
@@ -111,11 +114,13 @@
     
         a {
             cursor: pointer;
+            color: blue;
         }
     
         @media (max-width: 768px) {
             flex-direction: column;
-            // text-align: left;
+            text-align: left;
+            // align-items: left;
             width: 200px;            
             button {
                 margin-top: 10px;

@@ -19,7 +19,7 @@ const WishForm: React.FC = () => {
         const { name, value } = e.target;
         setFormData((prevData) => ({ ...prevData, [name]: value }));
     };
-    const lk = `/wish/?sender=${formData.sender}&receiver=${formData.receiver}&lang=${formData.language}`
+    const lk = `https://happy-new-year-2024-two.vercel.app/wish/?sender=${formData.sender}&receiver=${formData.receiver}&lang=${formData.language}`
 
     const handleGenerateLink = (link: any) => {
         setLink(link)
