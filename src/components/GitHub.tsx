@@ -14,4 +14,4 @@ const GitHub: React.FC = () => {
     )
 }
 
-export default GitHub
+export default GitHub;

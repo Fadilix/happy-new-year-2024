@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+
     form {
         border: 1px solid goldenrod;
         padding: 40px;
@@ -23,6 +24,7 @@
         .input-container {
             label {
                 display: block;
+                margin-bottom: 2px;
             }
 
             input {
@@ -97,35 +99,36 @@
         align-items: center;
         overflow: hidden;
         font-size: 10px;
-    
+
         button {
             all: unset;
             cursor: pointer;
             width: 40px;
-    
+
             svg {
                 transition: .3s all ease;
-    
+
                 &:hover {
                     color: #aaa;
                 }
             }
         }
-    
+
         a {
             cursor: pointer;
             color: blue;
         }
-    
+
         @media (max-width: 768px) {
             flex-direction: column;
             text-align: left;
             // align-items: left;
-            width: 200px;            
+            width: 200px;
+
             button {
                 margin-top: 10px;
             }
         }
     }
-    
+
 }

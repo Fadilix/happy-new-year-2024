@@ -12,6 +12,7 @@ const Wish: React.FC = () => {
     const lang = queryParams.get("lang");
     const sender = queryParams.get("sender")?.replace("_", " ");
     const receiver = queryParams.get("receiver")?.replace("_", " ");
+    const customText = queryParams.get("customText")?.replace("_", " ");
 
     const frScript = `Cher <b>${receiver}</b>, <br /><br />
 
@@ -32,10 +33,23 @@ const Wish: React.FC = () => {
             <div className='wish'>
                 <NavBar />
                 <Confetti />
-                {lang === "en" ? (
+
+                {!customText && lang === "en" ? (
                     <p dangerouslySetInnerHTML={{ __html: enScript }} className='letter'></p>
-                ) : (
+                ) : !customText && lang === "fr" ? (
                     <p dangerouslySetInnerHTML={{ __html: frScript }} className='letter'></p>
+                ) : (
+
+                    customText && (
+                        <div>
+                            <b style={{
+                                fontSize: "20px",
+                                color: "black",
+                            }}
+                            >{receiver}</b>
+                            <p>{customText}</p>
+                        </div>
+                    )
                 )}
 
                 <p style={{ marginLeft: "75%", fontWeight: "bold" }}>{sender}</p>
