@@ -86,7 +86,7 @@
         }
     }
 
-    .results{
+    .results {
         background-color: #ccc;
         padding: 10px;
         border-radius: 8px;
@@ -94,21 +94,33 @@
         text-align: center;
         display: flex;
         align-items: center;
-        button{
+    
+        button {
             all: unset;
             cursor: pointer;
             width: 40px;
-
-            svg{
+    
+            svg {
                 transition: .3s all ease;
-                &:hover{
-                    color: #aaa
+    
+                &:hover {
+                    color: #aaa;
                 }
             }
-
         }
-        a{
+    
+        a {
             cursor: pointer;
         }
+    
+        @media (max-width: 768px) {
+            flex-direction: column;
+            // text-align: left;
+            width: 200px;            
+            button {
+                margin-top: 10px;
+            }
+        }
     }
+    
 }

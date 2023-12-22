@@ -1,78 +1,84 @@
-.wish-container{
+.wish-container {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
-
-.wish {
-    width: 400px;
-
-    background-color: #ccc;
-    padding: 40px;
-    border-radius: 8px;
-
-    &::after {
-        content: "";
-        width: 100%;
-        height: 100%;
-    }
-
-    p {
-        color: black;
-
-    }
-}
-
-
-.send-to-someone {
-    all: unset;
-    cursor: pointer;
-    border: 1px solid #ccc;
-    padding: 15px;
-    border-radius: 8px;
-    position: relative;
     overflow: hidden;
-    transition: .3s all ease;
-    animation: floatingButton 3s infinite;
-    margin-top: 30px;
 
 
-    @keyframes floatingButton {
-        0% {
-            transform: translateY(5px);
+    .wish {
+        
+        @media screen and (max-width: 500px) {
+            width: 300px;
+        }
+        width: 400px;
+        overflow: hidden;
+
+        background-color: #ccc;
+        padding: 40px;
+        border-radius: 8px;
+
+        &::after {
+            content: "";
+            width: 100%;
+            height: 100%;
         }
 
-        50% {
-            transform: translateY(0px);
-        }
+        p {
+            color: black;
 
-        100% {
-            transform: translateY(5px);
         }
-
     }
 
-    &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 0;
-        height: 100%;
-        background-color: goldenrod;
+
+    .send-to-someone {
+        all: unset;
+        cursor: pointer;
+        border: 1px solid #ccc;
+        padding: 15px;
+        border-radius: 8px;
+        position: relative;
+        overflow: hidden;
         transition: .3s all ease;
-        z-index: -1;
+        animation: floatingButton 3s infinite;
+        margin-top: 30px;
 
-    }
 
-    &:hover::after {
-        width: 100%;
-    }
+        @keyframes floatingButton {
+            0% {
+                transform: translateY(5px);
+            }
 
-    &:hover {
-        letter-spacing: 3px;
-        box-shadow: 0 0 10px white;
+            50% {
+                transform: translateY(0px);
+            }
+
+            100% {
+                transform: translateY(5px);
+            }
+
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background-color: goldenrod;
+            transition: .3s all ease;
+            z-index: -1;
+
+        }
+
+        &:hover::after {
+            width: 100%;
+        }
+
+        &:hover {
+            letter-spacing: 3px;
+            box-shadow: 0 0 10px white;
+        }
     }
-}
 }

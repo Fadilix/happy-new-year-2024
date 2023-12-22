@@ -22,17 +22,18 @@ body {
         z-index: -1;
     }
 
-
     .home {
         text-align: center;
-        width: 600px;
+        width: 90%;
+        max-width: 600px;
+        margin: 0 auto;
 
         .wishes {
             margin-bottom: 20px;
 
             h1 {
                 font-family: 'Great Vibes', cursive;
-                font-size: 60px;
+                font-size: 4vw;
                 margin-bottom: 20px;
             }
         }
@@ -48,7 +49,6 @@ body {
             transition: .3s all ease;
             animation: floatingButton 3s infinite;
 
-
             @keyframes floatingButton {
                 0% {
                     transform: translateY(5px);
@@ -61,7 +61,6 @@ body {
                 100% {
                     transform: translateY(5px);
                 }
-
             }
 
             &::after {
@@ -74,7 +73,6 @@ body {
                 background-color: goldenrod;
                 transition: .3s all ease;
                 z-index: -1;
-
             }
 
             &:hover::after {
@@ -82,9 +80,27 @@ body {
             }
 
             &:hover {
-                letter-spacing: 3px;
-                box-shadow: 0 0 10px white;
+                letter-spacing: 0.3vw;
+                box-shadow: 0 0 1vw white;
             }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .home {
+            width: 90%;
+            max-width: none;
+
+            .wishes {
+
+                h1 {
+                    font-size: 30px;
+                }
+            }
+        }
+
+        .wish-someone {
+            padding: 3vw;
         }
     }
 }
