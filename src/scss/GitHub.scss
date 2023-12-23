@@ -1,36 +1,37 @@
-.github-button{
+.github-button {
     position: absolute;
     bottom: 5%;
     right: 5%;
-    animation: floatingButton 3s infinite;
+    animation: GitHubFloatingButton 3s infinite;
 
-    
-    @keyframes floatingButton {
-        0%{
-            transform: translateY(5px);
+
+    @keyframes GitHubFloatingButton {
+        0% {
+            transform: translateY(-5px);
         }
 
-        50%{
+        50% {
             transform: translateY(0px);
         }
 
-        100%{
-            transform: translateY(5px);
+        100% {
+            transform: translateY(-5px);
         }
     }
 
-    button{
+    button {
         all: unset;
         cursor: pointer;
         width: 30px;
 
 
-    img{
-        width: 40px;
-        transition: .3s all ease;
-        &:hover{
-            transform: scale(1.1);
+        img {
+            width: 40px;
+            transition: .3s all ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
         }
-    }
     }
 }
