@@ -1,20 +1,31 @@
+body {
+    overflow-y: auto;
+}
+
 .wish-container {
+    min-width: 100vw;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    align-self: center;
     flex-direction: column;
-    overflow: hidden;
+    // overflow: auto;
     padding-bottom: 30px;
+    // text-wrap: wrap;
 
 
     .wish {
-        
         @media screen and (max-width: 500px) {
             width: 300px;
         }
-        width: 400px;
-        overflow: hidden;
 
+        margin-top: 90px;
+
+        width: 400px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        // text-wrap: wrap;
         background-color: #ccc;
         padding: 40px;
         border-radius: 8px;
