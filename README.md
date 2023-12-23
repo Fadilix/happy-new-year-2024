@@ -1,30 +1,33 @@
-# React + TypeScript + Vite
+# Happy New Year 2024 Wisher 🎊
+React powered application that allows users to send personalized wishes to their friends and loved ones. Users can customize the content of the wish and share it with others.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## Technologies used 👨‍💻
+- React
+- TypeScript
+- SCSS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features 🛠️
 
-## Expanding the ESLint configuration
+- Personalized wishes
+- Language selection (English and French)
+- Confetti animation for a festive touch
+- Easy navigation with a responsive navbar
+- Option to send wishes with a custom message
+- Generate link that you can send to your friends
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+## Clone the repository ➕
+```bash
+git clone https://github.com/Fadilix/happy-new-year-2024.git
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+# Screenshots 🌊
+## Main Page
+![image](https://github.com/Fadilix/happy-new-year-2024/assets/121851593/f79a91ba-c16d-43a7-9f9c-6b5b88292897)
+
+## Form
+![image](https://github.com/Fadilix/happy-new-year-2024/assets/121851593/b655fb19-7959-4bf7-b4b9-e6e63127aedc)
+
+## Result page (English)
+![image](https://github.com/Fadilix/happy-new-year-2024/assets/121851593/9faa5c47-0a7f-427d-9a9c-f23986190857)
+
