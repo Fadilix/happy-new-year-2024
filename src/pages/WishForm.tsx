@@ -95,6 +95,7 @@ const WishForm: React.FC = () => {
                     <div className="input-container">
                         <label htmlFor="language">Language</label>
                         <select
+                            disabled={formData.customText.length > 0}
                             name="language"
                             value={formData.language}
                             onChange={handleInputChange}

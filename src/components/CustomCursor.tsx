@@ -20,7 +20,7 @@ const CustomCursor: React.FC = () => {
     }, []);
 
     return (
-        <div className="custom-cursor" style={{ transform: `translate(${x-15}px, ${y-15}px)`, background: cursor}}></div>
+        <div className="custom-cursor" style={{ transform: `translate(${x - 15}px, ${y - 15}px)`, background: cursor }}></div>
     );
 };
 

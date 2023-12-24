@@ -34,7 +34,7 @@
         cursor: pointer;
         position: relative;
 
-        &::after{
+        &::after {
             content: "";
             position: absolute;
             bottom: -10px;
@@ -45,7 +45,7 @@
             transition: .3s all ease;
         }
 
-        &:hover::after{
+        &:hover::after {
             width: 100%;
         }
     }
