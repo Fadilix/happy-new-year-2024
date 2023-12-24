@@ -6,11 +6,14 @@ import clipboardCopy from 'clipboard-copy';
 
 import toast from "react-hot-toast"
 import GitHub from '../components/GitHub';
+import useLanguage from '../hooks/UseLanguage';
 const WishForm: React.FC = () => {
+    const { language } = useLanguage();
+
     const [formData, setFormData] = useState({
         receiver: '',
         sender: '',
-        language: 'en',
+        language: language,
         customText: '',
     });
 
@@ -39,10 +42,18 @@ const WishForm: React.FC = () => {
     const handleCopyToClipBoard = (lk: any) => {
         clipboardCopy(lk)
             .then(() => {
-                toast.success("Link copied sucessfully !");
+                {
+                    language === "en" ?
+                        toast.success("Link copied sucessfully !")
+                        : toast.success("Lien copié avec succès");
+                }
             })
             .catch(() => {
-                toast.error('Failed to copy link, Please try again !');
+                {
+                    language === "en" ?
+                        toast.error('Failed to copy link, Please try again !')
+                        : toast.success("Echec lors de la copie, veuillez rééssaye");
+                }
             });
     }
     return (
@@ -51,7 +62,7 @@ const WishForm: React.FC = () => {
             <div className='form-container'>
                 <form onSubmit={handleFormSubmit}>
                     <div className="input-container">
-                        <label htmlFor="receiver">Name of the receiver</label>
+                        <label htmlFor="receiver"> {language === "en" ? "Name of the receiver" : "Nom du destinataire"}</label>
                         <input
                             type="text"
                             name="receiver"
@@ -62,7 +73,7 @@ const WishForm: React.FC = () => {
                     </div>
 
                     <div className="input-container">
-                        <label htmlFor="sender">Name of the sender</label>
+                        <label htmlFor="sender"> {language === "en" ? "Name of the sender" : "Nom de l'expéditeur"}</label>
                         <input
                             type="text"
                             name="sender"
@@ -73,7 +84,7 @@ const WishForm: React.FC = () => {
                     </div>
 
                     <div className="input-container" style={{ position: "relative", marginBottom: "10px" }}>
-                        <label htmlFor="sender" style={{ color: "#555" }}>Custom text (optional)</label>
+                        <label htmlFor="sender" style={{ color: "#555" }}> {language === "en" ? "Custom text (optional)" : "Message personnalisé"}</label>
                         <input
                             style={{ border: "1px solid #555" }}
                             type="text"
@@ -84,16 +95,16 @@ const WishForm: React.FC = () => {
                         <p
                             style={{
                                 position: "absolute",
-                                fontSize: "11px",
+                                fontSize: "9px",
                                 bottom: "5px",
                                 color: "#ccc"
                             }}
                         >
-                            PS: if not filled, uses default template</p>
+                            {language === "en" ? "PS: if not filled, uses default template" : "Si non renseigné, utilise le modèle par défaut."}</p>
                     </div>
 
                     <div className="input-container">
-                        <label htmlFor="language">Language</label>
+                        <label htmlFor="language"> {language === "en" ? "Language" : "Langue"}</label>
                         <select
                             disabled={formData.customText.length > 0}
                             name="language"
@@ -107,7 +118,7 @@ const WishForm: React.FC = () => {
                     </div>
 
                     <button onClick={() => { handleGenerateLink(lk) }} className='generate-link'>
-                        Generate link
+                        {language === "en" ? "Generate link" : "Générer le lien"}
                     </button>
                 </form>
 

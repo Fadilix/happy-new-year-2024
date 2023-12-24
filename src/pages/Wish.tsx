@@ -4,6 +4,7 @@ import NavBar from '../components/NavBar';
 import Confetti from 'react-confetti';
 import "../scss/Wish.scss"
 import GitHub from '../components/GitHub';
+import useLanguage from '../hooks/UseLanguage';
 
 
 const Wish: React.FC = () => {
@@ -13,6 +14,8 @@ const Wish: React.FC = () => {
     const sender = queryParams.get("sender")?.replace("_", " ");
     const receiver = queryParams.get("receiver")?.replace("_", " ");
     const customText = queryParams.get("customText")?.replace("_", " ");
+
+    const { language } = useLanguage();
 
     const frScript = `Cher <b>${receiver}</b>, <br /><br />
 
@@ -55,7 +58,11 @@ const Wish: React.FC = () => {
                 <p style={{ marginLeft: "75%", fontWeight: "bold", marginTop: "20px" }}>{sender}</p>
 
             </div>
-            <button className='send-to-someone'><Link to="/wish-form">Send Wish to someone</Link></button>
+            <button className='send-to-someone'>
+                <Link to="/wish-form">
+                    {language === "en" ? "Send Wish to someone" : "Souhaiter une bonnée à quelqu'un"}
+                </Link>
+            </button>
             <GitHub />
         </div>
     );
