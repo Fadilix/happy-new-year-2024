@@ -39,10 +39,10 @@ const WishForm: React.FC = () => {
     const handleCopyToClipBoard = (lk: any) => {
         clipboardCopy(lk)
             .then(() => {
-                toast.success("Copied sucessfully!")
+                toast.success("Link copied sucessfully !");
             })
             .catch(() => {
-                toast.error('Failed to copy');
+                toast.error('Failed to copy link, Please try again !');
             });
     }
     return (

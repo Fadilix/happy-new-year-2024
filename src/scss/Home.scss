@@ -35,6 +35,12 @@ body {
                 font-family: 'Great Vibes', cursive;
                 font-size: 4vw;
                 margin-bottom: 20px;
+                text-shadow: 0 0 5px;
+                transition: .8s all ease;
+
+                &:hover{
+                    text-shadow: 0 0 10px;
+                }
             }
         }
 
