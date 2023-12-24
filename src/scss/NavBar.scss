@@ -33,7 +33,10 @@
         position: absolute;
         right: 20%;
         top: 110%;
-
+        background-color: white;
+        padding: 15px;
+        border-radius: 5px;
+        color: black;
         img {
             width: 40px;
             transition: .3s all ease;
