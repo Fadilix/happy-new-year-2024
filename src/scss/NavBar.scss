@@ -10,7 +10,7 @@
     height: 70px;
     // padding-inline: 150px;
 
-    .right-side{
+    .right-side {
         display: flex;
     }
 
@@ -37,6 +37,8 @@
         padding: 15px;
         border-radius: 5px;
         color: black;
+        z-index: 2;
+
         img {
             width: 40px;
             transition: .3s all ease;
@@ -90,8 +92,8 @@
 
 
 @media screen and (max-width: 768px) {
-    .nav-bar{
-        .go-wish{
+    .nav-bar {
+        .go-wish {
             display: none;
         }
     }
