@@ -11,9 +11,9 @@ const Wish: React.FC = () => {
     const location = useLocation();
     const queryParams = new URLSearchParams(location.search);
     const lang = queryParams.get("lang") || "";
-    const sender = queryParams.get("sender")?.replace("_", " ");
-    const receiver = queryParams.get("receiver")?.replace("_", " ");
-    const customText = queryParams.get("customText")?.replace("_", " ");
+    const sender = queryParams.get("sender")?.replace(/_/g, " ");
+    const receiver = queryParams.get("receiver")?.replace(/_/g, " ");
+    const customText = queryParams.get("customText")?.replace(/_/g, " ");
 
     const { language } = useLanguage();
 
