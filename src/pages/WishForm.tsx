@@ -17,6 +17,8 @@ const WishForm: React.FC = () => {
         customText: '',
     });
 
+    const [showLink, setShowLink] = useState(false);
+
 
     // console.log(formData.customText);
 
@@ -33,7 +35,8 @@ const WishForm: React.FC = () => {
 
     // console.log(newReceiver, newSender);
     const handleGenerateLink = (link: any) => {
-        setLink(link)
+        setLink(link);
+        setShowLink(true);
     }
     const handleFormSubmit = (e: React.FormEvent) => {
         e.preventDefault();
@@ -122,7 +125,7 @@ const WishForm: React.FC = () => {
                     </button>
                 </form>
 
-                {formData.receiver && formData.sender && (
+                {showLink && (
                     <div className="results">
                         <Link to={`/wish/?sender=${newSender}&receiver=${newReceiver}&lang=${formData.language}${formData.customText && "&customText=" + formData.customText}`}>{link}</Link>
                         <button onClick={() => { handleCopyToClipBoard(lk) }}>
