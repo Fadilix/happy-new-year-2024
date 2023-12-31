@@ -37,7 +37,13 @@ const WishForm: React.FC = () => {
     // console.log(newReceiver, newSender);
     const handleGenerateLink = (link: any) => {
         setLink(link);
-        setShowLink(true);
+
+        if (!formData.sender && !formData.receiver) {
+            language === "en" ? toast.error("Please fill all the fields !")
+                : toast.error("Vous devez remplir tous les champs");
+        } else {
+            setShowLink(true);
+        }
     }
     const handleFormSubmit = (e: React.FormEvent) => {
         e.preventDefault();
