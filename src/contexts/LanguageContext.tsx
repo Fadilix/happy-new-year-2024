@@ -12,7 +12,7 @@ type LanguageProviderProps = {
 };
 
 const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
-    const [language, setLanguage] = useState(localStorage.getItem("language") || "en");
+    const [language, setLanguage] = useState(localStorage.getItem("language") || "fr");
 
     const contextValue: LangContextType = {
         language,
