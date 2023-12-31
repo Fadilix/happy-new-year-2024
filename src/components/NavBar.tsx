@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import "../scss/NavBar.scss"
 import { Link } from 'react-router-dom'
 import frenchFlag from "../assets/french.webp";
-import englishFlag from "../assets/english.avif";
+import englishFlag from "../assets/english.png";
 import { useState } from 'react';
 import useLanguage from '../hooks/UseLanguage';
 
