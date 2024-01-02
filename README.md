@@ -15,6 +15,8 @@ React powered application that allows users to send personalized wishes to their
 - Easy navigation with a responsive navbar
 - Option to send wishes with a custom message
 - Generate link that you can send to your friends
+- Vercel Analytics for the statistics on the visitors of the website
+- Navigator local storage to store the language selected
 
 ## Clone the repository ➕
 ```bash
