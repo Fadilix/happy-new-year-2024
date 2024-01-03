@@ -118,9 +118,10 @@ const WishForm: React.FC = () => {
                         <select
                             disabled={formData.customText.length > 0}
                             name="language"
-                            value={formData.language}
+                            // value={formData.language}    
                             onChange={handleInputChange}
                             required
+                            defaultValue={language}
                         >
                             <option value="en">English</option>
                             <option value="fr">French</option>
