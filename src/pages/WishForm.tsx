@@ -45,6 +45,7 @@ const WishForm: React.FC = () => {
             setShowLink(true);
         }
     }
+
     const handleFormSubmit = (e: React.FormEvent) => {
         e.preventDefault();
     }

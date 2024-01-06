@@ -11,7 +11,6 @@ const NavBar: React.FC = () => {
 
     const [showLang, setShowLang] = useState(false);
     const { language, setLanguage } = useLanguage();
-    // const [language, setLanguage] = useState("en");
 
     const handleShowLanguage = () => {
         setShowLang(!showLang);

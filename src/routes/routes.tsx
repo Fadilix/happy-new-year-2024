@@ -5,6 +5,7 @@ import WishForm from "../pages/WishForm";
 
 
 export const routes = createBrowserRouter([
+    
     {
         path: "",
         Component: Home
